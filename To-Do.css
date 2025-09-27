@@ -1,0 +1,225 @@
+body.dark-mode {
+   background: #121212;
+   color: #f1f1f1;
+}
+.dark-mode .container1 {
+   background: #232526;
+   color: #f1f1f1;
+}
+.dark-mode .Todo-name, .dark-mode .todo-date {
+   color: #f1f1f1;
+}
+.dark-mode .deleteElement {
+   background-color: #b71c1c;
+   border-color: #f44336;
+}
+.dark-mode .editElement {
+   background-color: #283593;
+   border-color: #7986cb;
+}
+.dark-mode .input, .dark-mode .dateElement {
+   background: #222;
+   color: #f1f1f1;
+   border: 1px solid #444;
+}
+.dark-mode .addBtn {
+   background-color: #388e3c;
+   color: #fff;
+}
+/* Toggle button style */
+.toggle-dark {
+   position: fixed;
+   top: 16px;
+   right: 16px;
+   z-index: 1000;
+   background: #222;
+   color: #fff;
+   border: none;
+   border-radius: 20px;
+   padding: 10px 18px;
+   font-size: 1.1rem;
+   cursor: pointer;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+   transition: background 0.3s, color 0.3s;
+}
+.toggle-dark:hover {
+   background: #444;
+   color: #ffe082;
+}
+@media (max-width: 600px) {
+   .todo-grid, .todo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 6px;
+      width: 100%;
+   }
+   .Todo-name, .todo-date, .deleteElement, .editElement {
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      text-align: left;
+   }
+   .deleteElement, .editElement {
+      margin-bottom: 4px;
+   }
+}
+@media (max-width: 600px) {
+   .container1 {
+      padding: 8px;
+      margin-top: 20px;
+      min-height: 300px;
+      border-radius: 10px;
+   }
+   .todo-grid, .Add-todo-grid, .todo-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+   }
+   .Todo-name, .todo-date {
+      font-size: 1.1rem;
+      padding: 4px 6px;
+      word-break: break-all;
+
+      
+   }
+   .deleteElement, .editElement {
+      font-size: 1rem;
+      padding: 6px 6px;
+      width: 100%;
+      margin: 2px 0;
+   }
+   .input, .dateElement {
+      font-size: 1.1rem;
+      padding: 6px;
+      width: 100%;
+      box-sizing: border-box;
+   }
+   .addBtn {
+      font-size: 1.1rem;
+      padding: 8px;
+      width: 100%;
+      margin-top: 6px;
+   }
+}
+      *{
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+      body{
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 15px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         background: linear-gradient(to bottom right, #a8E6CF, #A0C4FF);
+         flex-wrap: wrap;
+         
+      }
+      .todo-title{
+         display: grid;
+         place-content: center;
+         margin-bottom: 20px;
+         transition: all ease-out 1s;
+      }
+      .container1{
+         margin: 0;
+         display: flex;
+         flex-direction: column;
+         min-height: 500px;
+         /* max-width: 800px; */
+         background-image:url(), linear-gradient(to bottom, steelblue, #41c1e0);
+         padding: 20px;
+         margin-top: 80px;
+         border-radius: 20px;
+   
+         
+      }
+      .dateElement, .input{
+         padding: 10px;
+         /* border-style: solid; */
+         border-radius: 8px;
+         font-size: 2rem;
+         border: none;
+         text-wrap: wrap;
+         
+
+      }
+      .addBtn{
+         background-color: rgb(8, 173, 8);
+         padding: 10px;
+         color: white;
+         border: none;
+         cursor: pointer;
+         border-radius: 8px;
+         font-size: 2rem;
+         color: white;
+      }
+      .deleteElement{
+         background-color: rgb(172, 14, 14);
+         padding: 8px 10px;
+         color: white;
+         border: none;
+         cursor: pointer;
+          font-size: 1.2rem;
+         border-radius: 5px;
+
+      }
+      .container{
+         display: grid;
+         place-content: center;
+         margin-top: 30px;
+      }
+      .editElement{
+         background-color: rgb(26, 10, 172);
+         padding: 8px 10px;
+         color: white;
+         border: none;
+         cursor: pointer;
+         font-size: 1.2rem;
+         border-radius: 5px;
+
+      }
+      .todo-grid,.Add-todo-grid{
+         display: grid;
+         grid-template-columns: 200px 130px 80px 80px;
+         align-items: center;
+         gap: 15px;
+          
+
+       }
+       .Add-todo-grid{
+         margin-bottom: 10px;
+         align-items: stretch;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+         .Todo-name, .todo-date {
+             font-size: 1.5rem;
+             word-break: break-all;
+             /* Allows long words to break and wrap to the next line */
+          }
+      .input{
+         transition: all ease-in-out 0.4s;
+      }
+      .input:focus, .dateElement:focus{
+         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+         border: 1px solid rgba(81, 203, 238, 1);
+         outline: none;
+         transform: scale(1.05);
+      }
+      .todo-item{
+         width: 100%;
+         height: 100%;
+         display: grid;
+         grid-template-columns: 200px 150px 80px 80px;
+         align-items: center;
+         /* place-content: center; */
+         gap: 10px;
+         border: solid 2px black;
+         box-sizing: border-box;
+      }
